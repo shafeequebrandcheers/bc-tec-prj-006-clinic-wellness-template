@@ -1,0 +1,151 @@
+:root {
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.35rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.4rem;
+  --fs-3xl: clamp(2.2rem, 4.5vw, 3.4rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Theme Colors (default: Ayurvedic - Healing Herbal Green) */
+  --color-primary: #2C5E3B;
+  --color-primary-dark: #1E3F27;
+  --color-secondary: #B8863B;
+  --color-on-primary: #FFFFFF;
+
+  /* Neutral Surfaces & Text */
+  --color-bg: #F4F7F4;
+  --color-surface: #FFFFFF;
+  --color-text: #2D3748;
+  --color-text-muted: #5A6472;
+  --color-border: #DCE5DC;
+
+  /* Derived tints - follow the active theme automatically */
+  --color-primary-soft: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
+  --color-secondary-soft: color-mix(in srgb, var(--color-secondary) 16%, var(--color-surface));
+  --color-bg-alt: color-mix(in srgb, var(--color-primary) 4%, var(--color-bg));
+  --color-header-bg: color-mix(in srgb, var(--color-bg) 92%, transparent);
+
+  /* Footer */
+  --color-footer-bg: var(--color-primary-dark);
+  --color-footer-text: #FFFFFF;
+  --color-footer-muted: rgba(255, 255, 255, 0.78);
+  --color-footer-border: rgba(255, 255, 255, 0.16);
+
+  /* Feedback */
+  --color-success: #1F7A4D;
+  --color-success-soft: #E5F4EC;
+  --color-error: #B42318;
+  --color-error-soft: #FDECEA;
+  --color-overlay: rgba(15, 20, 25, 0.6);
+  --color-focus: var(--color-primary);
+
+  /* UI Metrics */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 20px 45px rgba(0, 0, 0, 0.1);
+  --transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+  --header-height: 76px;
+}
+
+/* =========================================
+   BUSINESS TYPE THEMES
+   Applied via <html data-theme="...">
+   ========================================= */
+
+/* Ayurvedic: herbal greens, warm beige, earthy tones */
+[data-theme="ayurvedic"] {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --color-primary: #2C5E3B;
+  --color-primary-dark: #1E3F27;
+  --color-secondary: #B8863B;
+  --color-bg: #F4F7F4;
+  --color-surface: #FFFFFF;
+  --color-text: #2D3748;
+  --color-text-muted: #5A6472;
+  --color-border: #DCE5DC;
+}
+
+/* Dental: clean blue, white, neutral gray */
+[data-theme="dental"] {
+  --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --color-primary: #0369A1;
+  --color-primary-dark: #075985;
+  --color-secondary: #0284C7;
+  --color-bg: #F6F9FC;
+  --color-surface: #FFFFFF;
+  --color-text: #1B2733;
+  --color-text-muted: #536271;
+  --color-border: #DDE6EF;
+}
+
+/* General medical: clinical blue, white, neutral gray */
+[data-theme="medical"] {
+  --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --color-primary: #0369A1;
+  --color-primary-dark: #0C4A6E;
+  --color-secondary: #0284C7;
+  --color-bg: #F5F8FA;
+  --color-surface: #FFFFFF;
+  --color-text: #1A2530;
+  --color-text-muted: #55636F;
+  --color-border: #DCE4EA;
+}
+
+/* Dermatology: soft neutrals with muted blush */
+[data-theme="dermatology"] {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --color-primary: #8A4F5C;
+  --color-primary-dark: #5E3540;
+  --color-secondary: #C98F8A;
+  --color-bg: #FBF7F5;
+  --color-surface: #FFFFFF;
+  --color-text: #2E2427;
+  --color-text-muted: #6C5D60;
+  --color-border: #EEE2DE;
+}
+
+/* Physiotherapy: teal, green, light neutrals */
+[data-theme="physiotherapy"] {
+  --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --color-primary: #0F766E;
+  --color-primary-dark: #0B4F4A;
+  --color-secondary: #22A06B;
+  --color-bg: #F4FAF8;
+  --color-surface: #FFFFFF;
+  --color-text: #15302C;
+  --color-text-muted: #4D6662;
+  --color-border: #D8E9E5;
+}
+
+/* Wellness spa: sage green, cream, warm natural tones */
+[data-theme="spa"] {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --color-primary: #5C7356;
+  --color-primary-dark: #3E4F3A;
+  --color-secondary: #C49A6C;
+  --color-bg: #FAF7F0;
+  --color-surface: #FFFFFF;
+  --color-text: #2D2B26;
+  --color-text-muted: #66625A;
+  --color-border: #E8E1D3;
+}
